@@ -1,9 +1,10 @@
+package lab1;
+
 import java.io.PrintStream;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
-
 class test{
 
 
@@ -53,9 +54,20 @@ class test{
        int key;
        System.out.println("enter a sentence to encrypt");
        sentence=sc.nextLine();
+    //    if (sentence.length()<7){
+    //     return;
+
+    //    }
+
+
+
        System.out.println("enter a key");
        key=sc.nextInt();
 
+    if (key>31 || key<=0){
+        System.out.println("wrong key value");
+        return;
+    }
     //    System.out.println(sentence);
 
     //    System.out.println(key);

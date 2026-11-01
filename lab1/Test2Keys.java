@@ -1,3 +1,5 @@
+package lab1;
+
 import java.io.PrintStream;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
@@ -152,7 +154,7 @@ ArrayList<Character> combinedList = new ArrayList<>();
         for (String sn : parsedSentences) {
         String msn = sn.toUpperCase();
 
-        for (int j = 0; j < msn.length(); j++) {
+            for (int j = 0; j < msn.length(); j++) {
 
             char currentChar = msn.charAt(j);
 

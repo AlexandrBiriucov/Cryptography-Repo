@@ -1,9 +1,10 @@
+package lab1;
+
 import java.io.PrintStream;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
-
 class test2 {
 
     static String normalizeRomanian(String text) {

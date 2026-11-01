@@ -1,14 +1,17 @@
+package lab1;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.Scanner;
+
 class Main{
 
 
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
+        System.out.println("enter : encrypt, decrypt , or 2keys");
        String user_choice= sc.nextLine();
 
 
