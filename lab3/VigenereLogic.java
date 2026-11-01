@@ -18,7 +18,7 @@ public class VigenereLogic {
 
         String combinedString = String.join("", parsedMessage);
              for (int i=0;i<combinedString.length();i++){
-              int keyInd=  combinedString.charAt(i)%key.length(); //calcualte the correspong key index
+              int keyInd = i % key.length(); //calcualte the correspong key index
               int CypheredInd= GetCypheredInd(obj.letterToIndex.get(combinedString.charAt(i)),obj.letterToIndex.get(key.charAt(keyInd)));
                 stringBuilder.append(obj.letters[CypheredInd]);
              }
@@ -56,8 +56,9 @@ public class VigenereLogic {
 
         String combinedString = String.join("", parsedMessage);
              for (int i=0;i<combinedString.length();i++){
-              int keyInd=  combinedString.charAt(i)%key.length(); //calcualte the correspong key index
-              int CypheredInd= GetDecypheredInd(obj.letterToIndex.get(combinedString.charAt(i)),obj.letterToIndex.get(key.charAt(keyInd)));
+            //   int keyInd=  combinedString.charAt(i)%key.length(); //calcualte the correspong key index
+                    int keyInd = i % key.length();
+            int CypheredInd= GetDecypheredInd(obj.letterToIndex.get(combinedString.charAt(i)),obj.letterToIndex.get(key.charAt(keyInd)));
                 stringBuilder.append(obj.letters[CypheredInd]);
              }
 
@@ -72,7 +73,7 @@ public class VigenereLogic {
 
     public static int GetDecypheredInd(int letterInd, int KeyInd){
         int DecypheredInd=0;
-        DecypheredInd= (letterInd - KeyInd)%31;
+        DecypheredInd = (letterInd - KeyInd + 31) % 31;
 
         return DecypheredInd;   
 
